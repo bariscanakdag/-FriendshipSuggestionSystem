@@ -1,0 +1,54 @@
+﻿<Window x:Class="FindFriends.View.FindFriendWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FindFriends.View"
+        mc:Ignorable="d"
+        Title="FindFriendWindow" Height="800" Width="974">
+    <Grid>
+        <DataGrid  AutoGenerateColumns="False"    ItemsSource="{Binding NetworkList}" Margin="10,67,76,421" RenderTransformOrigin="0.5,0.5" >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sıra"  Binding="{Binding NetworkID}"/>
+                <DataGridTextColumn Header="Numarası"  Binding="{Binding Numarasi}"/>
+                <DataGridTextColumn Header="Arkdaş1" Binding="{Binding Ark1}" />
+                <DataGridTextColumn Header="Arkdaş2" Binding="{Binding Ark2}" />
+                <DataGridTextColumn Header="Arkdaş3 " Binding="{Binding Ark3}" />
+                <DataGridTextColumn Header="Arkdaş4 " Binding="{Binding Ark4}" />
+                <DataGridTextColumn Header="Arkdaş5 " Binding="{Binding Ark5}" />
+                <DataGridTextColumn Header="Arkdaş6 " Binding="{Binding Ark6}" />
+                <DataGridTextColumn Header="Arkdaş7 " Binding="{Binding Ark7}" />
+                <DataGridTextColumn Header="Arkdaş8 " Binding="{Binding Ark8}" />
+                <DataGridTextColumn Header="Arkdaş9 " Binding="{Binding Ark9}" />
+                <DataGridTextColumn Header="Arkdaş10 " Binding="{Binding Ark10}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="DOSYA&#xD;&#xA;   AÇ" Command="{Binding DosyaAcCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="34"/>
+        <DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding ProfilList}" Margin="10,386,85,109" RenderTransformOrigin="0.5,0.5" >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sıra"  Binding="{Binding ProfilID}"/>
+                <DataGridTextColumn Header="Numarası"  Binding="{Binding Numarasi}"/>
+                <DataGridTextColumn Header="A1" Binding="{Binding A1}" />
+                <DataGridTextColumn Header="A2" Binding="{Binding A2}" />
+                <DataGridTextColumn Header="A3 " Binding="{Binding A3}" />
+                <DataGridTextColumn Header="A4 " Binding="{Binding A4}" />
+                <DataGridTextColumn Header="A5 " Binding="{Binding A5}" />
+                <DataGridTextColumn Header="A6 " Binding="{Binding A6}" />
+                <DataGridTextColumn Header="A7 " Binding="{Binding A7}" />
+                <DataGridTextColumn Header="A8 " Binding="{Binding A8}" />
+                <DataGridTextColumn Header="A9 " Binding="{Binding A9}" />
+                <DataGridTextColumn Header="A10 " Binding="{Binding A10}" />
+                <DataGridTextColumn Header="A11 " Binding="{Binding A11}" />
+                <DataGridTextColumn Header="A12 " Binding="{Binding A12}" />
+                <DataGridTextColumn Header="A13 " Binding="{Binding A13}" />
+                <DataGridTextColumn Header="A14 " Binding="{Binding A14}" />
+                <DataGridTextColumn Header="A15 " Binding="{Binding A15}" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox Text="{Binding ArananOgrenci}" HorizontalAlignment="Left" Height="22" Margin="260,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Arkadaş Bul" Command="{Binding ArkadasBulCommand}" HorizontalAlignment="Left" Margin="404,22,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
